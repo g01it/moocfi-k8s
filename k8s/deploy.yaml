@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/yannh/kubernetes-json-schema/refs/heads/master/v1.31.5-standalone/all.json
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: uuidshower-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: uuidshower
+  template:
+    metadata:
+      labels:
+        app: uuidshower
+    spec:
+      containers:
+        - name: app
+          image: uuidshower
+          imagePullPolicy: Never
