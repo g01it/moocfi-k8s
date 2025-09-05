@@ -1,6 +1,6 @@
 PROJ_NAME := uuidshower
 
-.PHONY = build clean prune tidy docker strip deploy test 
+.PHONY: build clean prune tidy docker strip deploy test 
 
 build:
 	@GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build $(PROJ_NAME)
