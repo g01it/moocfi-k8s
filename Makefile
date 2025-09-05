@@ -7,12 +7,15 @@ clean:
 	@rm $(PROJ_NAME)
 	@docker image rm $(PROJ_NAME):latest
 
+prune: clean
+	@docker image prune
+
 tidy:
 	@go mod tidy
 
 docker: build
 	@docker build . -t $(PROJ_NAME)
-	@k3d image import $(PROJ_NAME)
+	@k3d image import $(PROJ_NAME):latest
 
 strip: build
 	@strip $(PROJ_NAME)
