@@ -3,18 +3,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: uuidshower-deployment
+  name: logoutput-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: uuidshower
+      app: logoutput
   template:
     metadata:
       labels:
-        app: uuidshower
+        app: logoutput
     spec:
       containers:
         - name: app
-          image: uuidshower
+          image: logoutput
           imagePullPolicy: Never

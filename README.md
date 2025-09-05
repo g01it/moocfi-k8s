@@ -1,4 +1,4 @@
-# UUIDShower
+# Log Output
 
 ## Prerequisites
 - Docker

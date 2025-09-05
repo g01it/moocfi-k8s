@@ -1,4 +1,4 @@
-PROJ_NAME := uuidshower
+PROJ_NAME := logoutput
 
 .PHONY: build clean prune tidy docker strip deploy test 
 
@@ -26,4 +26,4 @@ deploy: docker strip
 	@kubectl apply -f ./k8s/deploy.yaml
 
 test: docker
-	(timeout 1 docker run --rm uuidshower:latest | grep --color=never -E "^202")
+	(timeout 1 docker run --rm logoutput:latest | grep --color=never -E "^202")

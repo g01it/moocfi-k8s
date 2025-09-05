@@ -1,4 +1,4 @@
 FROM scratch
 
-COPY uuidshower /app
+COPY logoutput /app
 CMD ["/app"]
